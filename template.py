@@ -45,7 +45,7 @@ class PrintableModel(ABC):
     def run(self):
         """Create, export, and display the model"""
         model = self.create()
-        if os.getenv('SHOW_DISPLAY'): show_object(model)
+        if not os.getenv('HIDE_DISPLAY'): show_object(model)
         export_cad_model_with_docs(model, self.name, self.version)
 
 if __name__ == "__main__":

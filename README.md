@@ -27,6 +27,6 @@ cadquery-scripts/
 To generate all models and their documentation, run:
 
 ```bash
-for f in scripts/*.py; do .venv/Scripts/python -m "scripts.$(basename ${f%.*})"; done
+for f in scripts/*.py; do HIDE_DISPLAY=1 .venv/Scripts/python -m "scripts.$(basename ${f%.*})"; done
 ```
 
