@@ -14,7 +14,8 @@ cadquery-scripts/
 │           └── example.svg        # Model visualization
 ├── scripts/                       # Model generation scripts
 │   └── example.py                 # One script per model
-├── template.py                    # Base class template for model creation
+├── template.py                    # Abstract class inheriting from model (use w/ LLM)
+├── model.py                       # Base class handling run/name functionality
 ├── utils.py                       # Display and export utilities
 ├── .gitignore                     # Git ignore file
 ├── .python-version                # Specifies required Python version
