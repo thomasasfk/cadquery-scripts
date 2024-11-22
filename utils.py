@@ -109,7 +109,7 @@ def export_cad_model_with_docs(
         }
 
     # Create markdown documentation
-    doc_filename = version_dir / "documentation.md"
+    doc_filename = version_dir / f"{name}.md"
 
     with doc_filename.open('w') as f:
         # Header
