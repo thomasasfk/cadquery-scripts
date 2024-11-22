@@ -1,0 +1,8 @@
+.idea/
+.idea
+.idea/*
+.venv
+*novc.py
+*.stl
+*novc/
+.old-models
