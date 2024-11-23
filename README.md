@@ -20,6 +20,7 @@ cadquery-scripts/
 ├── .gitignore                     # Git ignore file
 ├── .python-version                # Specifies required Python version
 ├── README.md                      # This file
+├── template.md                    # A markdown template for pasting to LLMs
 └── requirements.txt               # Project dependencies
 ```
 
