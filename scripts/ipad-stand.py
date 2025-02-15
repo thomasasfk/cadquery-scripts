@@ -43,6 +43,10 @@ class iPadStand(PrintableModel):
         self._connection_offset = self._total_mount_width / 6
 
     @property
+    def name(self) -> str:
+        return "ipad-stand"
+
+    @property
     def version(self) -> int:
         return 1
 

@@ -23,6 +23,10 @@ class MassageGunAttachment(PrintableModel):
         self._ball_overlap = ball_overlap
 
     @property
+    def name(self) -> str:
+        return "massage-gun-attachment"
+
+    @property
     def version(self) -> int:
         return 2  # Incremented version due to design change
 

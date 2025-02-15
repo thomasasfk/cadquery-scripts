@@ -12,6 +12,10 @@ class IPadPro129Model(PrintableModel):
         self._version_num = 1
 
     @property
+    def name(self) -> str:
+        return "ipad-pro-12-9"
+
+    @property
     def version(self) -> int:
         return self._version_num
 

@@ -41,6 +41,10 @@ class MountingPlate(PrintableModel):
         self.cutout_width = self.hole_spacing_width - (2 * self.center_hole_padding)
 
     @property
+    def name(self) -> str:
+        return "mounting-plate"
+
+    @property
     def version(self) -> int:
         return 1
 

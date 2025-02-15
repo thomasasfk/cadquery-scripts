@@ -23,7 +23,6 @@ Important implementation notes:
 ## Template Code
 
 ```python
-import inspect
 import os
 from abc import ABC
 from abc import abstractmethod
@@ -38,11 +37,8 @@ class PrintableModel(ABC):
     version: int = 1  # increment when appropriate
 
     @property
-    def name(self) -> str:
-        impl_file = inspect.getfile(self.__class__)
-        basename = os.path.basename(impl_file)
-        name, _ = os.path.splitext(basename)
-        return name
+    @abstractmethod
+    def name(self) -> str: ...
 
     def run(self):
         model = self.create()
@@ -51,13 +47,6 @@ class PrintableModel(ABC):
 
     @abstractmethod
     def create(self) -> cq.Workplane: ...
-
-
-if __name__ == "__main__":
-    # Example usage:
-    # model = YourModelClass(param1=value1, param2=value2)
-    # model.run()
-    ...
 ```
 
 Note, you can implement this using the following:

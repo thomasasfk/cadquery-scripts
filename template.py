@@ -1,4 +1,3 @@
-import inspect
 import os
 from abc import ABC
 from abc import abstractmethod
@@ -13,11 +12,8 @@ class PrintableModel(ABC):
     version: int = 1  # increment when appropriate
 
     @property
-    def name(self) -> str:
-        impl_file = inspect.getfile(self.__class__)
-        basename = os.path.basename(impl_file)
-        name, _ = os.path.splitext(basename)
-        return name
+    @abstractmethod
+    def name(self) -> str: ...
 
     def run(self):
         model = self.create()

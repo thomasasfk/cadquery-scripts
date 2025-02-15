@@ -34,6 +34,10 @@ class IpadStandClip(PrintableModel):
         self._version = 1  # Initial version
 
     @property
+    def name(self) -> str:
+        return "ipad-stand-clip"
+
+    @property
     def version(self) -> int:
         return self._version
 
